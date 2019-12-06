@@ -4,12 +4,33 @@
     <h1>Add</h1>
 
     <div>
+        <form accept-charset="UTF-8" action="/comments" method="post">
+            <label for="name">Name:</label>
+            <input type="text" name="name">
+            <br><br>
+            <label for="email">Email:</label>
+            <input type="text" name="email">
+            <br><br>
+            <label for="location">Location:</label>
+            <input type="text" name="location">
+            <br><br>
+            <label for="comment">Comment:</label>
+            <textarea name="comment" cols="30" rows="4"></textarea>
+            <br><br>
+            <button>Comment</button>
+
+        </form>
+        <br><br>
+    </div>
+
+    <div>
         <% comments.forEach(function(comment){ %>
               <div>
-                    <h3> Location: <%= comment.name %></h3>
-                    <h3> Name: <%= comment.location_name%></h3>
+                    <h3> Location: <%= comment.location_name %></h3>
+                    <h3> Name: <%= comment.name%></h3>
                     <h3> Comment: <%= comment.comment %></h3>
-                </div>  
+                    <a href="/commentsedit/<%= comment.id %>">Edit</a>
+                </div>  <br>
             <% }); %>
     </div>
 </div>

@@ -1,26 +1,23 @@
 [
     {
-        "id": 1,
-        "location_id": 1,
+        "id": "0",
         "location_name": "Dublin",
-        "name": "Dende",
-        "email": "dende@kame.jp",
-        "comment": "This place sucks"
+        "name": "Robb",
+        "email": "robb@ddd",
+        "comment": "Haaaaaa"
+    },
+    {
+        "id": 1,
+        "location_name": "casca",
+        "name": "Vasia",
+        "email": "vaas@ss",
+        "comment": "asda"
     },
     {
         "id": 2,
-        "location_id": 2,
-        "location_name": "Paris",
-        "name": "Dende",
-        "email": "dende@kame.jp",
-        "comment": "This place doesn't suck as bad as the last one"
-    },
-    {
-        "id": 3,
-        "location_id": 2,
-        "location_name": "Paris",
-        "name": "Dende",
-        "email": "dende@kame.jp",
-        "comment": "This place doesn't suck as bad as the last one"
+        "location_name": "Home",
+        "name": "Andrei",
+        "email": "andr@sadsa",
+        "comment": "dsfvsdvcds"
     }
-    ]
+]
