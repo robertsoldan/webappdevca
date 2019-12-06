@@ -1,0 +1,16 @@
+[
+{
+    "id": 1,
+    "name": "Dublin",
+    "country": "Ireland",
+    "description": "lorem ipsum",
+    "price" : 200
+},
+{
+    "id": 2,
+    "name": "Paris",
+    "country": "France",
+    "description": "lorem ipsum",
+    "price" : 150
+}
+]

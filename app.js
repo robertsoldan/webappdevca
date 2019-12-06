@@ -1,6 +1,7 @@
 const express = require('express');
 const app = express();
-const contact = require("./model/contact.json"); // allow the app to access the contact.json 
+const comments = require("./model/comments.json"); // allow the app to access the contact.json 
+const locations = require("./model/locations.json");
 const fs = require('fs');
 const bodyParser = require("body-parser");
 
@@ -13,28 +14,28 @@ app.use(express.static("partials"));
 app.use(bodyParser.urlencoded({
    extended: true
 }));
-///tftdf=
 
 app.set('view engine', 'ejs');
 
 app.get('/', function (req, res) {
-   res.render("index");
-});
-
-app.get('/contacts', function (req, res) {
-   res.render("contacts", {
-      contact
+   res.render("index", {
+      locations
    });
 });
 
-
-
-app.get('/add', function (req, res) {
-   res.render("add");
+app.get('/contact', function (req, res) {
+   res.render("contact");
 });
 
-app.get('/products', function (req, res) {
-   res.render("products");
+
+app.get('/book', function (req, res) {
+   res.render("book");
+});
+
+app.get('/comments', function (req, res) {
+   res.render("comments", {
+      comments
+   });
 });
 
 

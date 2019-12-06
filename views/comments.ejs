@@ -1,0 +1,17 @@
+<% include ../partials/header %>
+
+<div>
+    <h1>Add</h1>
+
+    <div>
+        <% comments.forEach(function(comment){ %>
+              <div>
+                    <h3> Location: <%= comment.name %></h3>
+                    <h3> Name: <%= comment.location_name%></h3>
+                    <h3> Comment: <%= comment.comment %></h3>
+                </div>  
+            <% }); %>
+    </div>
+</div>
+
+<% include ../partials/footer %>
