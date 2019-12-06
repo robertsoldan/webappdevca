@@ -1,23 +1,9 @@
 [
     {
-        "id": "0",
-        "location_name": "Dublin",
-        "name": "Robb",
-        "email": "robb@ddd",
-        "comment": "Haaaaaa"
-    },
-    {
-        "id": 1,
-        "location_name": "casca",
-        "name": "Vasia",
-        "email": "vaas@ss",
-        "comment": "asda"
-    },
-    {
         "id": 2,
-        "location_name": "Home",
-        "name": "Andrei",
-        "email": "andr@sadsa",
-        "comment": "dsfvsdvcds"
+        "location_name": "csaca",
+        "name": "csacs",
+        "email": "csac",
+        "comment": "casca"
     }
 ]

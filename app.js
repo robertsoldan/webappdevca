@@ -102,14 +102,32 @@ app.post('/commentsedit/:id', function(req, res){
    fs.readFile('./model/comments.json', 'utf8',  function readfileCallback(err){ // reading and writing the file
       if(err) {
             throw(err)     
-        } else {   
-            
+        } else {    
             var json = JSON.stringify(comments, null, 4); // this line structures the JSON so it is easy on the eye
             fs.writeFile('./model/comments.json',json, 'utf8', function(){}) // Write to file 
         }
     });
 
-   res.redirect('/comments');
+   res.redirect('/comments, {comments}');
+});
+
+app.get('/commentdelete/:id', function(req, res){
+   comments.forEach(function(item, index) {
+      if(item.id.toString() === req.params.id.toString()) {
+         comments.splice(index, 1);
+      }
+   });
+
+   fs.readFile('./model/comments.json', 'utf8',  function readfileCallback(err){ // reading and writing the file
+      if(err) {
+            throw(err)     
+        } else {         
+            var json = JSON.stringify(comments, null, 4); // this line structures the JSON so it is easy on the eye
+            fs.writeFile('./model/comments.json',json, 'utf8', function(){}) // Write to file 
+        }
+    });
+
+   res.redirect('comments', {comments});
 });
 
 
