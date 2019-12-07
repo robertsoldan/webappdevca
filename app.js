@@ -1,21 +1,27 @@
+
 const express = require('express');
 const app = express();
-const comments = require("./model/comments.json"); // allow the app to access the contact.json 
-const locations = require("./model/locations.json");
+var comments = require("./model/comments.json"); // allow the app to access the contact.json 
+var locations = require("./model/locations.json"); // accessing locations.json 
 const fs = require('fs');
 const bodyParser = require("body-parser");
 
+// Making sure we have access to all the relevant folders
 app.use(express.static("views"));
 app.use(express.static("scripts"));
 app.use(express.static("images"));
 app.use(express.static("public"));
 app.use(express.static("partials"));
+
+// Body parser 
 app.use(bodyParser.urlencoded({
    extended: true
 }));
 
+// Setting the view engine to ejs
 app.set('view engine', 'ejs');
 
+// Routing, passing the json vars to the pages so they can be accessed by ejs
 app.get('/', function (req, res) {
    res.render("index", {
       locations
@@ -28,7 +34,9 @@ app.get('/contact', function (req, res) {
 
 
 app.get('/book', function (req, res) {
-   res.render("book");
+   res.render("book", {
+      locations
+   });
 });
 
 app.get('/comments', function (req, res) {
@@ -72,7 +80,7 @@ app.post('/comments', function (req, res) {
 
    // Redirect back to the comments page
    res.redirect('/comments');
-});
+}); 
 
 app.get('/commentsedit/:id', function(req, res){
    let comment = {};
@@ -108,7 +116,7 @@ app.post('/commentsedit/:id', function(req, res){
         }
     });
 
-   res.redirect('/comments, {comments}');
+   res.redirect('/comments');
 });
 
 app.get('/commentdelete/:id', function(req, res){
