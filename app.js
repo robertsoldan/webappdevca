@@ -46,6 +46,8 @@ app.get('/comments', function (req, res) {
    });
 });
 
+
+
 // maxId will return the id by checking the id of the last object in the array and then adding 1 to that. 
 function maxId(arr) {
    if(arr.length === 0) {
@@ -80,7 +82,9 @@ app.post('/comments', function (req, res) {
 
    // Redirect back to the comments page
    res.redirect('/comments');
-}); 
+});
+
+
 
 app.get('/commentsedit/:id', function(req, res){
    let comment = {};
@@ -119,8 +123,11 @@ app.post('/commentsedit/:id', function(req, res){
    res.redirect('/comments');
 });
 
+// Deleting a comment
 app.get('/commentdelete/:id', function(req, res){
+   // Loop through the comments array
    comments.forEach(function(item, index) {
+      // If 
       if(item.id.toString() === req.params.id.toString()) {
          comments.splice(index, 1);
       }
@@ -134,7 +141,7 @@ app.get('/commentdelete/:id', function(req, res){
             fs.writeFile('./model/comments.json',json, 'utf8', function(){}) // Write to file 
         }
     });
-
+   // Redirect to the comments page after
    res.redirect('/comments'); 
 });
 

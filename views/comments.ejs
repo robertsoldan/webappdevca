@@ -32,7 +32,7 @@
                     <h3> Name: <%= comment.name%></h3>
                     <h3> Comment: <%= comment.comment %></h3>
                     <button onclick="displayField(<%= comment.id %>)" id="edit<%= comment.id %>">Edit</button>                 
-                    <div class="editcheck" id="<%= comment.id%>">
+                    <div class="editcheck" id="<%= comment.id %>">
                         <p>Please enter your email to verify your edit:</p>
                         <input type="text" name="email" id="emailcheck<%= comment.id %>">
                         <button onclick="checkEmail('<%= comment.email %>', '<%= comment.id %>')">Edit</button>
