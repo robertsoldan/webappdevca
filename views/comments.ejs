@@ -1,0 +1,47 @@
+<% include ../partials/header %>
+
+<script src="comments.js"></script>
+<div>
+    <h1>Add</h1>
+
+    <div>
+        <form accept-charset="UTF-8" action="/comments" method="post">
+            <label for="name">Name:&nbsp;</label>
+            <input type="text" name="name">
+            <br><br>
+            <label for="email">Email:&nbsp;</label>
+            <input type="text" name="email">
+            <span> &nbsp;(will not be displayed)</span>
+            <br><br>
+            <label for="location">Location:&nbsp;</label>
+            <input type="text" name="location">
+            <br><br>
+            <label for="comment">Comment:</label>
+            <br>
+            <textarea name="comment" cols="30" rows="4"></textarea>
+            <br><br>
+            <button>Comment</button>
+        </form>
+        <br><br>
+    </div>
+
+    <div>
+        <% comments.forEach(function(comment){ %>
+              <div>
+                    <h3> Location: <%= comment.location_name %></h3>
+                    <h3> Name: <%= comment.name%></h3>
+                    <h3> Comment: <%= comment.comment %></h3>
+                    <button onclick="displayField(<%= comment.id %>)" id="edit<%= comment.id %>">Edit</button>                 
+                    <div class="editcheck" id="<%= comment.id %>">
+                        <p>Please enter your email to verify your edit:</p>
+                        <input type="text" name="email" id="emailcheck<%= comment.id %>">
+                        <button onclick="checkEmail('<%= comment.email %>', '<%= comment.id %>')">Edit</button>
+                        </div>
+                    </div>  <br>
+            <% }); %>
+    </div>
+</div>
+
+
+
+<% include ../partials/footer %>

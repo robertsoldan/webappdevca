@@ -1,0 +1,24 @@
+<% include ../partials/header %>
+
+<div>
+    <div>
+        <form accept-charset="UTF-8" action="/commentsedit/<%= comment.id %>" method="post">
+            <label for="name">Name:</label>
+            <input type="text" name="name" value="<%= comment.name %>">
+            <br><br>
+            <label for="email">Email:</label>
+            <input type="text" name="email" value="<%= comment.email %>">
+            <br><br>
+            <label for="location">Location:</label>
+            <input type="text" name="location" value="<%= comment.location_name %>">
+            <br><br>
+            <label for="comment">Comment:</label>
+            <textarea name="comment" cols="30" rows="4" ><%= comment.comment %></textarea>
+            <br><br>
+            <button>Save</button>
+            <a href="/commentdelete/<%= comment.id %>">Delete</a>
+
+        </form>
+</div>
+
+<% include ../partials/footer %>
