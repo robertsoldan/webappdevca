@@ -1,20 +1,12 @@
 
 const express = require('express');
 const app = express();
-<<<<<<< HEAD
-const comments = require("./model/comments.json"); // allow the app to access the contact.json 
-const locations = require("./model/locations.json");
-const fs = require('fs');
-const bodyParser = require("body-parser");
-
-=======
 var comments = require("./model/comments.json"); // allow the app to access the contact.json 
 var locations = require("./model/locations.json"); // accessing locations.json 
 const fs = require('fs');
 const bodyParser = require("body-parser");
 
 // Making sure we have access to all the relevant folders
->>>>>>> 0752f54732ec70f712b555c4d829cbeccf7d23f9
 app.use(express.static("views"));
 app.use(express.static("scripts"));
 app.use(express.static("images"));
@@ -34,26 +26,6 @@ app.get('/', function (req, res) {
    res.render("index", {
       locations
    });
-<<<<<<< HEAD
-});
-
-app.get('/contact', function (req, res) {
-   res.render("contact");
-});
-
-
-app.get('/book', function (req, res) {
-   res.render("book");
-});
-
-app.get('/comments', function (req, res) {
-   maxId(comments);
-   res.render("comments", {
-      comments
-   });
-});
-
-=======
 });
 
 app.get('/contact', function (req, res) {
@@ -76,7 +48,6 @@ app.get('/comments', function (req, res) {
 
 
 
->>>>>>> 0752f54732ec70f712b555c4d829cbeccf7d23f9
 // maxId will return the id by checking the id of the last object in the array and then adding 1 to that. 
 function maxId(arr) {
    if(arr.length === 0) {
@@ -111,49 +82,6 @@ app.post('/comments', function (req, res) {
 
    // Redirect back to the comments page
    res.redirect('/comments');
-<<<<<<< HEAD
-});
-
-app.get('/commentsedit/:id', function(req, res){
-   let comment = {};
-   comments.forEach(function(item, index) {
-         if(item.id.toString() === req.params.id.toString()) {
-            comment = item;
-         }
-      });
-   res.render('commentsedit', {comment});
-});
-
-app.post('/commentsedit/:id', function(req, res){
-   let comment = {
-      "id": req.params.id,
-      "location_name": req.body.location,
-      "name": req.body.name,
-      "email": req.body.email,
-      "comment": req.body.comment
-   }
-
-   comments.forEach(function(item, index) {
-      if(item.id.toString() === req.params.id.toString()) {
-         comments[index] = comment;
-      }
-   });
-
-   fs.readFile('./model/comments.json', 'utf8',  function readfileCallback(err){ // reading and writing the file
-      if(err) {
-            throw(err)     
-        } else {    
-            var json = JSON.stringify(comments, null, 4); // this line structures the JSON so it is easy on the eye
-            fs.writeFile('./model/comments.json',json, 'utf8', function(){}) // Write to file 
-        }
-    });
-
-   res.redirect('/comments, {comments}');
-});
-
-app.get('/commentdelete/:id', function(req, res){
-   comments.forEach(function(item, index) {
-=======
 });
 
 
@@ -200,7 +128,6 @@ app.get('/commentdelete/:id', function(req, res){
    // Loop through the comments array
    comments.forEach(function(item, index) {
       // If 
->>>>>>> 0752f54732ec70f712b555c4d829cbeccf7d23f9
       if(item.id.toString() === req.params.id.toString()) {
          comments.splice(index, 1);
       }
@@ -214,11 +141,7 @@ app.get('/commentdelete/:id', function(req, res){
             fs.writeFile('./model/comments.json',json, 'utf8', function(){}) // Write to file 
         }
     });
-<<<<<<< HEAD
-
-=======
    // Redirect to the comments page after
->>>>>>> 0752f54732ec70f712b555c4d829cbeccf7d23f9
    res.redirect('/comments'); 
 });
 
