@@ -127,7 +127,7 @@ app.get('/commentdelete/:id', function(req, res){
         }
     });
 
-   res.redirect('comments', {comments});
+   res.redirect('/comments'); 
 });
 
 
