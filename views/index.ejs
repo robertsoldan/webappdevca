@@ -2,30 +2,30 @@
 
 <!DOCTYPE html>
 <html>
-    <title>Travel agency</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-    <link rel="stylesheet" href="app.css" type="text/css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <style>
+<title>Travel agency</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+<link rel="stylesheet" href="app.css" type="text/css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<style>
 
-    </style>
+</style>
 
 
 
 <body>
 
-    
+
 
     <!-- Navigation Bar -->
-    
+
     <div class="w3-bar w3-white w3-border-bottom w3-xlarge">
         <a href="#" class="w3-bar-item w3-button w3-text-red w3-hover-red"><b><i class="fa fa-map-marker w3-margin-right"></i>Logo</b></a>
         <a href="#" class="w3-bar-item w3-button w3-right w3-hover-red w3-text-grey"><i class="fa fa-search"></i></a>
     </div>
-    
+
     <div class="w3-display-container" style="margin-bottom:50px">
         <img src="/dublin.jpeg" style="width:100%">
         <div class="w3-display-bottomleft w3-container w3-amber w3-hover-orange w3-hide-small" style="bottom:10%;opacity:0.7;width:70%">
@@ -34,7 +34,7 @@
     </div>
     <h1>Here are our current New Year getaway deals</h1>
 
-    
+
 
     <div class="w3-row w3-container" style="margin:50px 0">
         <div class="w3-half w3-container">
@@ -46,7 +46,7 @@
                 <p id="rome2" style="display:none">See out the old 2019 and say hello to 2019 in one of the oldest cities in the world with breath-taking views of amazing sights such as the Colosseum, the Pantheon, Roman Forum and numerous fountains around the city. Hey, while you’re there,
                     why not visit a completely different country – it’s only a couple of metro stops away, you know? We’re talking about the Vatican, of course, where you can see St. Peter’s Basilica and the Sistine Chapel.
                 </p>
-                <p><button class="w3-button w3-black w3-padding-large" type="submit">BOOK</button></p>
+                <p><button class="w3-button w3-black w3-padding-large" onclick="book1()" type="submit">BOOK</button></p>
                 <p id="success"></p>
                 <p id="hide1" style="display: none">See less</p>
             </div>
@@ -99,8 +99,8 @@
             </div>
         </div>
     </div>
-    <a href="/book">Other page</a>
-    -->
+
+
 
     <script>
         $(document).ready(function() {
@@ -166,6 +166,11 @@
                 $("#hide4").hide();
             })
         });
+
+
+        function book1() {
+            window.location.replace("/book")
+        }
     </script>
 
 </body>
