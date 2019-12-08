@@ -152,7 +152,7 @@ app.get('/book/:id', function(req, res) {
             location = item;
         }
     });
-    res.render('book', { locations });
+    res.render('book', { location });
 });
 
 const PORT = process.env.PORT || 3000;
