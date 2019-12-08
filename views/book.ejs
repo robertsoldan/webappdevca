@@ -13,7 +13,7 @@
 
 
     <div class="grid-container">
-        <% trips.forEach(function(locations) { %>
+        <% locations.forEach(function(locations) { %>
             <div class=”item”>
                 <h2 class=”itemtitle”> City:
                     <%= locations.city %>
@@ -31,8 +31,8 @@
             <% }); %>
     </div>
 
+    
     <%- JSON.stringify(locations) %>
-
 
 
 

@@ -71,7 +71,7 @@ app.post('/comments', function (req, res) {
    fs.readFile('./model/comments.json', 'utf8',  function readfileCallback(err){ // reading and writing the file
     
       if(err) {
-            throw(err)     
+            throw(err);    
         } else {   
             comments.push(comment); // add the new data to the JSON file
             var json = JSON.stringify(comments, null, 4); // this line structures the JSON so it is easy on the eye
