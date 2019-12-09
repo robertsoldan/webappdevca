@@ -12,8 +12,8 @@
 <body>
 
 
-    <div class="grid-container">
-        
+    <div class="grid-container" id="hidetrip">
+        <function(location)>
             <div class=”item”>
                 <h2 class=”itemtitle”> City:
                     <%= location.city %>
@@ -28,7 +28,6 @@
                     <%= location.price %>
                 </p>
             </div>
-            
     </div>
 
 
@@ -37,7 +36,7 @@
 
 
     <!-- Book -->
-    <div class="w3-container">
+    <div class="w3-container" id="hideform">
         <h2>Fill in your info below to book this trip</h2>
 
         <input class="w3-input w3-padding-16 w3-border" id="fullName" type="text" placeholder="Name" required name="Name">
@@ -46,46 +45,59 @@
         <p id="checkEmail"></p>
         <input class="w3-input w3-padding-16 w3-border" id="robo" type="text" placeholder="2000 + 20 = " required name="robo">
         <p id="checkRobo"></p>
-        <p><button class="w3-button w3-black w3-padding-large" type="submit" onclick="checkForm()">BOOK</button></p>
-        <p id="success"></p>
-    </div>
-
+        <p><button class="w3-button w3-black w3-padding-large" id="success" type="submit" onclick="checkForm()">BOOK</button></p>
 
     </div>
 
+
+
+
+    <div class="w3-half w3-container" id="show" style="display: none">
+        <div class="w3-topbar w3-border-amber">
+            <img src="/fireworks.jpeg" style="width:100%">
+            <h1 id="congrats">Your booking has been confirmed. We'll be in touch soon!</h1>
+        </div>
+    </div>
 
 
     <script>
-        function checkForm() {
-            x = document.getElementById("fullName").value;
-            if (x == "") {
-                document.getElementById("checkName").innerHTML = "The field must not be empty"
-            } else if (/\s+/.test(x)) {
-                document.getElementById("checkName").innerHTML = "Input correct"
-            } else {
-                document.getElementById("checkName").innerHTML = "You need to enter your first name and the last name"
-            }
+        /* function checkForm() {
+                                                    x = document.getElementById("fullName").value;
+                                                    if (x == "") {
+                                                        document.getElementById("checkName").innerHTML = "The field must not be empty"
+                                                    } else if (/\s+/.test(x)) {
+                                                        document.getElementById("checkName").innerHTML = "Input correct"
+                                                    } else {
+                                                        document.getElementById("checkName").innerHTML = "You need to enter your first name and the last name"
+                                                    }
 
-            y = document.getElementById("email").value;
-            testY = (/@/.test(y));
+                                                    y = document.getElementById("email").value;
+                                                    testY = (/@/.test(y));
 
-            if (testY == false) {
-                document.getElementById("checkEmail").innerHTML = "The email address is invalid"
-            } else if (testY == true) {
-                document.getElementById("checkEmail").innerHTML = "Email address correct!"
-            }
+                                                    if (testY == false) {
+                                                        document.getElementById("checkEmail").innerHTML = "The email address is invalid"
+                                                    } else if (testY == true) {
+                                                        document.getElementById("checkEmail").innerHTML = "Email address correct!"
+                                                    }
 
-            z = document.getElementById("robo").value;
-            if (z == 2020) {
-                document.getElementById("checkRobo").innerHTML = "Thanks for verifying."
-            } else {
-                document.getElementById("checkRobo").innerHTML = "Try again."
-            }
+                                                    z = document.getElementById("robo").value;
+                                                    if (z == 2020) {
+                                                        document.getElementById("checkRobo").innerHTML = "Thanks for verifying."
+                                                    } else {
+                                                        document.getElementById("checkRobo").innerHTML = "Try again."
+                                                    }
 
-            if (/\s+/.test(x) && testY == true && z == 2020) {
-                document.getElementById("success").innerHTML = "Successfull registration"
-            }
-        }
+                                                    if (/\s+/.test(x) && testY == true && z == 2020) {
+
+                                                    }
+                                                 } */
+        $(document).ready(function() {
+            $("#success").click(function() {
+                $("#hideform").hide();
+                $("#hidetrip").hide();
+                $("#show").show();
+            })
+        });
     </script>
 
 
