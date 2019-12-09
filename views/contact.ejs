@@ -9,6 +9,7 @@
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="contact.js"></script>
 <body id="contact">
 
 <!-- Navbar -->
@@ -39,19 +40,19 @@
 <div class="w3-quarter">
   <img src="robert.jpg" alt="Boss" style="width:45%" class="w3-circle w3-hover-opacity">
   <h3>Robert Soldan</h3>
-  <p>Travel Agent</p>
+  <p>Travel Specialist | Europe, Middle East and Africa (EMEA)</p>
 </div>
 
 <div class="w3-quarter">
   <img src="dejan.jpg" alt="Boss" style="width:45%" class="w3-circle w3-hover-opacity">
   <h3>Dejan Mijakovac</h3>
-  <p>Travel Agent</p>
+  <p>Travel Specialist | Asia-Pacific (APAC)</p>
 </div>
 
 <div class="w3-quarter">
   <img src="sophia.jpg" alt="Boss" style="width:45%" class="w3-circle w3-hover-opacity">
   <h3>Sophia Hennouni</h3>
-  <p>Travel Agent</p>
+  <p>Travel Specialist | North, Central and South America (AMER)</p>
 </div>
 
 <div class="w3-quarter">
@@ -91,41 +92,50 @@ It is in the compelling zest of high adventure and of victory, and in creative a
     <p>Thursday: 9am - 7pm</p>
     <p>Friday: 9am - 6pm</p>
     <p>Saturday: 10am - 5pm</p>
-    <p>Closed on Sundays and Bank Holidays</p>
+    <p style="font-style: italic">Closed on Sundays and Bank Holidays</p>
     </div>
     <div class="w3-col m7">
-      <form class="w3-container w3-card-4 w3-padding-16 w3-white" action="/action_page.php" target="_blank">
+      <form class="w3-container w3-card-4 w3-padding-16 w3-white">
       <div class="w3-section">      
         <label>First Name*</label>
-        <input class="w3-input" type="text" name="fName" required>
+        <input class="w3-input" type="text" id="fName" name="fName" required>
+        <p style="color: red" id="alertfName"></p>
       </div>
       <div class="w3-section">      
-            <label>Last Name*</label>
-            <input class="w3-input" type="text" name="lName" required>
+        <label>Last Name*</label>
+        <input class="w3-input" type="text" id="lName" name="lName" required>
+        <p style="color: red" id="alertlName"></p>
       </div>
       <div class="w3-section">      
         <label>Email*</label>
-        <input class="w3-input" type="text" name="Email" required>
+        <input class="w3-input" type="text" id="Email" name="Email" required>
+        <p style="color: red" id="alertEmail"></p>
       </div>
       <div class="w3-section">      
-            <label>Confirm Email*</label>
-            <input class="w3-input" type="text" name="checkEmail" required>
+        <label>Confirm Email*</label>
+        <input class="w3-input" type="text" id="CheckEmail" name="CheckEmail" required>
+        <p style="color: red" id="alertCheckEmail"></p>
       </div>
       <div class="w3-section">      
-            <label>Phone Number (optional)</label>
-            <input class="w3-input" type="text" name="Phone">
+        <label>Phone Number (optional)</label>
+        <input class="w3-input" type="text" id="Phone" name="Phone">
       </div>
       <div class="w3-section">      
-            <label>Subject*</label>
-            <input class="w3-input" type="text" name="Subject" required>
+        <label>Subject*</label>
+        <input class="w3-input" type="text" id="subject" name="Subject" required>
       </div>
       <div class="w3-section">      
         <label>Message*</label>
-        <input class="w3-input" type="text" name="Message" required>
+        <input class="w3-input" type="text" id="message" name="Message" required>
       </div>  
+      <div class="w3-section">      
+        <label>How much is 5 + 4?*</label>
+        <input class="w3-input" type="text" id="Robo" name="Robo" required>
+        <p style="color: red" id="alertRobo"></p>
+      </div>
       <input class="w3-check" type="checkbox" checked name="Newsletter">
       <label>Subscribe to Bon Voyage! newsletter</label>
-      <button type="submit" class="w3-button w3-right w3-theme">Send</button>
+      <button type="submit" class="w3-button w3-right w3-theme" onclick="validateContactForm()">Send</button>
       </form>
     </div>
   </div>
