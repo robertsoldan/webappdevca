@@ -1,0 +1,20 @@
+[
+    {
+        "id": 1,
+        "fname": "John",
+        "lname": "Doe",
+        "email": "johndoe@email.com",
+        "phone": "087 666 1234",
+        "subject": "Honeymoon",
+        "message": "Hello, do you provide any honeymoon planning? What would be the budget for this service? Rgds, JD"
+    },
+    {
+        "id": 2,
+        "fname": "Susan",
+        "lname": "Holliday",
+        "email": "susan@nci.ie",
+        "phone": "",
+        "subject": "Business Cruise",
+        "message": "Hi there, would you be able to help my company organise a cruise next summer? This would be for around 100 people. Thanks, Susy"
+    }
+]
