@@ -21,8 +21,10 @@ function validateContactForm(){
     // Validate email 2 match
 	var email1 = document.getElementById("Email").value;
 	var email2 = document.getElementById("CheckEmail").value;
-	if (email1 == email2){
-        document.getElementById("alertCheckEmail").innerHTML = "Emails don't match.";
+	if (email1 != ""){
+        if (email1 != email2){
+            document.getElementById("alertCheckEmail").innerHTML = "Emails don't match.";
+        }
     }
 
     // Validate Robot
