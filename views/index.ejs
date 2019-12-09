@@ -1,75 +1,56 @@
-<!-- <% include ../partials/header %> -->
-
-<!DOCTYPE html>
-<html>
-<title>Travel agency</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-<link rel="stylesheet" href="app.css" type="text/css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<style>
-
-</style>
+<% include ../partials/header %>
 
 
-
-<body>
-
-
-
-    <!-- Navigation Bar -->
-
-    <div class="w3-bar w3-white w3-border-bottom w3-xlarge">
-        <a href="#" class="w3-bar-item w3-button w3-text-red w3-hover-red"><b><i class="fa fa-map-marker w3-margin-right"></i>Logo</b></a>
-        <a href="#" class="w3-bar-item w3-button w3-right w3-hover-red w3-text-grey"><i class="fa fa-search"></i></a>
-    </div>
-
-    <div class="w3-display-container" style="margin-bottom:50px">
-        <img src="/dublin.jpeg" style="width:100%">
-        <div class="w3-display-bottomleft w3-container w3-amber w3-hover-orange w3-hide-small" style="bottom:10%;opacity:0.7;width:70%">
+    <!-- displays the banner at the top of the page with the welcoming text -->
+    <div class="w3-display-container">
+        <img src="/dublin.jpeg">
+        <div class="w3-display-bottomleft w3-container w3-amber w3-hover-orange w3-hide-small" id="ready">
             <h2>Ready to travel?</h2>
         </div>
     </div>
-    <h1>Here are our current New Year getaway deals</h1>
+
+    <h1 id="deals">Here are our current New Year getaway deals</h1>
 
 
-
-    <div class="w3-row w3-container" style="margin:50px 0">
+    <!-- showing basic information about the location, image and accompanying text -->
+    <div class="w3-row w3-container" id="dest1">
         <div class="w3-half w3-container">
             <div class="w3-topbar w3-border-amber">
-                <img src="/colosseum.jpeg" style="width:100%">
+                <img src="/colosseum.jpeg">
                 <h2>Rome</h2>
                 <p id="rome1">If you want to start 2020 in style – you know the saying – all roads lead to Rome.</p>
                 <p id="show1">See more</p>
                 <p id="rome2" style="display:none">See out the old 2019 and say hello to 2019 in one of the oldest cities in the world with breath-taking views of amazing sights such as the Colosseum, the Pantheon, Roman Forum and numerous fountains around the city. Hey, while you’re there,
                     why not visit a completely different country – it’s only a couple of metro stops away, you know? We’re talking about the Vatican, of course, where you can see St. Peter’s Basilica and the Sistine Chapel.
                 </p>
-                <p><button class="w3-button w3-black w3-padding-large" onclick="book1()" type="submit">BOOK</button></p>
                 <p id="hide1" style="display: none">See less</p>
+                <!-- button redirects the user to the booking page - pulls only info on this location -->
+                <p><button class="w3-button w3-black w3-padding-large" onclick="book1()" type="submit">BOOK</button></p>
             </div>
         </div>
-
+        <!-- showing basic information about the location, image and accompanying text -->
         <div class="w3-half w3-container">
             <div class="w3-topbar w3-border-amber">
-                <img src="/eiffel.jpeg" style="width:100%">
+                <img src="/eiffel.jpeg">
                 <h2>Paris</h2>
                 <p id="paris1">Voulez-vous voyager avec nous? The city of love (or lights, whichever works for you) is waiting for you.</p>
                 <p id="show2">See more</p>
                 <p id="paris2" style="display:none">There is no better place for couples to start 2020 than by walking down the Champs-Elysées, climbing all the way to the top of the Eiffel Tower and warm up in one of the numerous cafes in the Latin Quarter. Bonus – all the amazing museums
                     from Louvre to Pompidou where you can really boost your general knowledge and get those culture Insta points. While there, you can take a trip to Versailles and see how the royals used to live.
                 </p>
-                <p><button class="w3-button w3-black w3-padding-large" onclick="book2()" type="submit">BOOK</button></p>
                 <p id="hide2" style="display: none">See less</p>
+
+                <!-- button redirects the user to the booking page - pulls only info on this location -->
+                <p><button class="w3-button w3-black w3-padding-large" onclick="book2()" type="submit">BOOK</button></p>
             </div>
         </div>
     </div>
 
-    <div class="w3-row w3-container" style="margin:50px 0">
+    <!-- showing basic information about the location, image and accompanying text -->
+    <div class="w3-row w3-container" id="dest2">
         <div class="w3-half w3-container">
             <div class="w3-topbar w3-border-orange">
-                <img src="/hop.jpeg" style="width:100%">
+                <img src="/hop.jpeg">
                 <h2>London</h2>
                 <p id="london1">Ready for some 5 o’clock tea? Or 5 AM shot of coffee to push you to keep partying your way into the New Year?</p>
                 <p id="show3">See more</p>
@@ -77,14 +58,17 @@
                     the London Eye and setting your watch to match the banging of Big Ben, you can roam around the city and check out some of the unmissable locations, like the Tower of London, Tower Bridge, Camden Town and Madame Tussauds. Get this trip
                     booked! Now!
                 </p>
-                <p><button class="w3-button w3-black w3-padding-large" onclick="book3()" type="submit">BOOK</button></p>
                 <p id="hide3" style="display: none">See less</p>
+
+                <!-- button redirects the user to the booking page - pulls only info on this location -->
+                <p><button class="w3-button w3-black w3-padding-large" onclick="book3()" type="submit">BOOK</button></p>
             </div>
         </div>
 
+        <!-- showing basic information about the location, image and accompanying text -->
         <div class="w3-half w3-container">
             <div class="w3-topbar w3-border-orange">
-                <img src="/redsquare.jpg" style="width:100%">
+                <img src="/redsquare.jpg">
                 <h2>Moscow</h2>
 
                 <p id="moscow1">Yes, we do know it’s kind of cold in Moscow now, but you can do what the locals do in order to warm themselves up – drink loads of vodka. </p>
@@ -93,8 +77,10 @@
                     most amazing architecture, this is the place for you. From Red Square and St. Basil’s Cathedral to Lenin’s Mausoleum, Moscow really offers you numerous ways to experience the culture that goes far beyond the clichés seen in American
                     films. Bonus – Moscow is still preparing for Christmas, which is in the beginning of January per their calendar, so you get to relive Christmas time.
                 </p>
-                <p><button class="w3-button w3-black w3-padding-large" onclick="book4()" type="submit">BOOK</button></p>
                 <p id="hide4" style="display: none">See less</p>
+
+                <!-- button redirects the user to the booking page - pulls only info on this location -->
+                <p><button class="w3-button w3-black w3-padding-large" onclick="book4()" type="submit">BOOK</button></p>
             </div>
         </div>
     </div>
@@ -102,6 +88,7 @@
 
 
     <script>
+        // displays the additional text about the location and see less button, see more disappears
         $(document).ready(function() {
             $("#show1").click(function() {
                 $("#rome2").show();
@@ -110,6 +97,8 @@
             })
         });
 
+        /* hides the additional text about the location and see less button, 
+        see more appears */
         $(document).ready(function() {
             $("#hide1").click(function() {
                 $("#rome2").hide();
@@ -118,74 +107,88 @@
             })
         });
 
+        /* the additional text about the location and see less fade in, 
+        see more disappears */
         $(document).ready(function() {
             $("#show2").click(function() {
-                $("#paris2").show();
+                $("#paris2").fadeIn(3000);
                 $("#show2").hide();
-                $("#hide2").show();
+                $("#hide2").fadeIn(3000);
             })
         });
 
+        /* the additional text about the location fades out, 
+        see less button disappears, see more fades in */
         $(document).ready(function() {
             $("#hide2").click(function() {
-                $("#paris2").hide();
-                $("#show2").show();
+                $("#paris2").fadeOut(3000);
+                $("#show2").fadeIn(3000);
                 $("#hide2").hide();
             })
         });
 
+        /* the additional text about the location 
+        and see less button slide down, see more disappears */
         $(document).ready(function() {
             $("#show3").click(function() {
-                $("#london2").show();
+                $("#london2").slideDown(3000);
                 $("#show3").hide();
-                $("#hide3").show();
+                $("#hide3").slideDown(3000);
             })
         });
 
+        /* the additional text about the location slides up, 
+        see less button disappears, see more slides down */
         $(document).ready(function() {
             $("#hide3").click(function() {
-                $("#london2").hide();
-                $("#show3").show();
+                $("#london2").slideUp(3000);
+                $("#show3").slideDown(3000);
                 $("#hide3").hide();
             })
         });
 
+        /* the additional text about the location fades in,
+        see less button slides down, see more disappears */
         $(document).ready(function() {
             $("#show4").click(function() {
-                $("#moscow2").show();
+                $("#moscow2").fadeIn(3000);
                 $("#show4").hide();
-                $("#hide4").show();
+                $("#hide4").slideDown(3000);
             })
         });
 
+        /* the additional text about the location slides up, 
+        see less button disappears, see more fades in */
         $(document).ready(function() {
             $("#hide4").click(function() {
-                $("#moscow2").hide();
-                $("#show4").show();
+                $("#moscow2").slideUp(3000);
+                $("#show4").fadeIn(3000);
                 $("#hide4").hide();
             })
         });
 
-
+        // redirects user to a booking page for Rome, pulled from JSON file
         function book1() {
             window.location.replace("/book/1")
         }
 
+
+        // redirects user to a booking page for Paris, pulled from JSON file
         function book2() {
             window.location.replace("/book/2")
         }
 
+        // redirects user to a booking page for London, pulled from JSON file
         function book3() {
             window.location.replace("/book/3")
         }
 
+        // redirects user to a booking page for Moscow, pulled from JSON file
         function book4() {
             window.location.replace("/book/4")
         }
     </script>
 
-</body>
 
-</html>
 
-<!-- <%include ../partials/footer %> -->
+    <%include ../partials/footer %>

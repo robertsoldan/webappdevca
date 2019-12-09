@@ -144,7 +144,7 @@ app.get('/commentdelete/:id', function(req, res) {
     res.redirect('/comments');
 });
 
-
+// getting the information from the JSON file per id
 app.get('/book/:id', function(req, res) {
     let location = {};
     locations.forEach(function(item, index) {
