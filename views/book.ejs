@@ -13,26 +13,26 @@
 
 
     <div class="grid-container">
-        <% locations.forEach(function(locations) { %>
+        
             <div class=”item”>
                 <h2 class=”itemtitle”> City:
-                    <%= locations.city %>
+                    <%= location.city %>
                 </h2>
                 <p class=”itemp”> Included:
-                    <%= locations.included %>
+                    <%= location.included %>
                 </p>
                 <p class=”itemp”> Extras:
-                    <%= locations.extras %>
+                    <%= location.extras %>
                 </p>
                 <p class=”itemp”> Price:
-                    <%= locations.price %>
+                    <%= location.price %>
                 </p>
             </div>
-            <% }); %>
+            
     </div>
 
 
-    <!-- <%- JSON.stringify(locations) %> -->
+
 
 
 
