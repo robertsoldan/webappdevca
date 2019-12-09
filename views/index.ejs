@@ -2,30 +2,30 @@
 
 <!DOCTYPE html>
 <html>
-    <title>Travel agency</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-    <link rel="stylesheet" href="app.css" type="text/css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <style>
+<title>Travel agency</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+<link rel="stylesheet" href="app.css" type="text/css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<style>
 
-    </style>
+</style>
 
 
 
 <body>
 
-    
+
 
     <!-- Navigation Bar -->
-    
+
     <div class="w3-bar w3-white w3-border-bottom w3-xlarge">
         <a href="#" class="w3-bar-item w3-button w3-text-red w3-hover-red"><b><i class="fa fa-map-marker w3-margin-right"></i>Logo</b></a>
         <a href="#" class="w3-bar-item w3-button w3-right w3-hover-red w3-text-grey"><i class="fa fa-search"></i></a>
     </div>
-    
+
     <div class="w3-display-container" style="margin-bottom:50px">
         <img src="/dublin.jpeg" style="width:100%">
         <div class="w3-display-bottomleft w3-container w3-amber w3-hover-orange w3-hide-small" style="bottom:10%;opacity:0.7;width:70%">
@@ -34,7 +34,7 @@
     </div>
     <h1>Here are our current New Year getaway deals</h1>
 
-    
+
 
     <div class="w3-row w3-container" style="margin:50px 0">
         <div class="w3-half w3-container">
@@ -46,8 +46,7 @@
                 <p id="rome2" style="display:none">See out the old 2019 and say hello to 2019 in one of the oldest cities in the world with breath-taking views of amazing sights such as the Colosseum, the Pantheon, Roman Forum and numerous fountains around the city. Hey, while you’re there,
                     why not visit a completely different country – it’s only a couple of metro stops away, you know? We’re talking about the Vatican, of course, where you can see St. Peter’s Basilica and the Sistine Chapel.
                 </p>
-                <p><button class="w3-button w3-black w3-padding-large" type="submit">BOOK</button></p>
-                <p id="success"></p>
+                <p><button class="w3-button w3-black w3-padding-large" onclick="book1()" type="submit">BOOK</button></p>
                 <p id="hide1" style="display: none">See less</p>
             </div>
         </div>
@@ -60,8 +59,8 @@
                 <p id="show2">See more</p>
                 <p id="paris2" style="display:none">There is no better place for couples to start 2020 than by walking down the Champs-Elysées, climbing all the way to the top of the Eiffel Tower and warm up in one of the numerous cafes in the Latin Quarter. Bonus – all the amazing museums
                     from Louvre to Pompidou where you can really boost your general knowledge and get those culture Insta points. While there, you can take a trip to Versailles and see how the royals used to live.
-
                 </p>
+                <p><button class="w3-button w3-black w3-padding-large" onclick="book2()" type="submit">BOOK</button></p>
                 <p id="hide2" style="display: none">See less</p>
             </div>
         </div>
@@ -77,8 +76,8 @@
                 <p id="london2" style="display:none">You might have done it before, but this might be one last massively spectacular pre-Brexit party that London is going to host. Be there an get New Year’s Eve partying done! While you’re not watching the amazing fireworks display around
                     the London Eye and setting your watch to match the banging of Big Ben, you can roam around the city and check out some of the unmissable locations, like the Tower of London, Tower Bridge, Camden Town and Madame Tussauds. Get this trip
                     booked! Now!
-
                 </p>
+                <p><button class="w3-button w3-black w3-padding-large" onclick="book3()" type="submit">BOOK</button></p>
                 <p id="hide3" style="display: none">See less</p>
             </div>
         </div>
@@ -93,14 +92,14 @@
                 <p id="moscow2" style="display:none">It’s not only vodka (or Putin) that makes Moscow special. If you’re looking for the real wintery, snowy atmosphere, where warm clothes, mittens and warm (or alcoholic drinks) will keep you going and you want to see some of the world’s
                     most amazing architecture, this is the place for you. From Red Square and St. Basil’s Cathedral to Lenin’s Mausoleum, Moscow really offers you numerous ways to experience the culture that goes far beyond the clichés seen in American
                     films. Bonus – Moscow is still preparing for Christmas, which is in the beginning of January per their calendar, so you get to relive Christmas time.
-
                 </p>
+                <p><button class="w3-button w3-black w3-padding-large" onclick="book4()" type="submit">BOOK</button></p>
                 <p id="hide4" style="display: none">See less</p>
             </div>
         </div>
     </div>
-    <a href="/book">Other page</a>
-    -->
+
+
 
     <script>
         $(document).ready(function() {
@@ -166,6 +165,23 @@
                 $("#hide4").hide();
             })
         });
+
+
+        function book1() {
+            window.location.replace("/book/1")
+        }
+
+        function book2() {
+            window.location.replace("/book/2")
+        }
+
+        function book3() {
+            window.location.replace("/book/3")
+        }
+
+        function book4() {
+            window.location.replace("/book/4")
+        }
     </script>
 
 </body>
