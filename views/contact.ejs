@@ -1,9 +1,125 @@
 <% include ../partials/header %>
+<body>
 
-
-
-<div>
-    <h1>Contacts</h1>
+<!-- Image Header -->
+<div class="w3-display-container w3-animate-opacity">
+  <img src="beach.jpg" alt="boat" style="width:100%;min-height:350px;max-height:600px;">
+  <div class="w3-display-bottomleft w3-container w3-amber w3-hover-orange w3-hide-small" style="bottom:10%;opacity:0.7;width:70%">
+        <h2>Get In Touch!</h2>
+  </div>
 </div>
+
+<!-- Team Container -->
+<div class="w3-container w3-padding-64 w3-center" id="team">
+<h2>Our Team</h2>
+
+<div class="w3-row"><br>
+
+<div class="w3-quarter">
+  <img src="robert.jpg" alt="Boss" style="width:45%" class="w3-circle w3-hover-opacity">
+  <h3>Robert Soldan</h3>
+  <p>Travel Specialist | Europe, Middle East and Africa (EMEA)</p>
+</div>
+
+<div class="w3-quarter">
+  <img src="dejan.jpg" alt="Boss" style="width:45%" class="w3-circle w3-hover-opacity">
+  <h3>Dejan Mijakovac</h3>
+  <p>Travel Specialist | Asia-Pacific (APAC)</p>
+</div>
+
+<div class="w3-quarter">
+  <img src="sophia.jpg" alt="Boss" style="width:45%" class="w3-circle w3-hover-opacity">
+  <h3>Sophia Hennouni</h3>
+  <p>Travel Specialist | North, Central and South America (AMER)</p>
+</div>
+
+<div class="w3-quarter">
+  <img src="manuel.jpg" alt="Boss" style="width:45%" class="w3-circle w3-hover-opacity">
+  <h3>Manuel Tova-Izquierdo</h3>
+  <p>IT Consultant</p>
+</div>
+
+</div>
+</div>
+
+<!-- Quote Row -->
+<div class="w3-panel w3-center w3-sand w3-padding-64">
+<h3 class="w3-xlarge" style="font-style: italic"><span style="font-size:50px;line-height:1em;opacity:0.2">&#10077;</span>
+It is in the compelling zest of high adventure and of victory, and in creative action, that man finds his supreme joys.
+<span style="font-size:50px;line-height:1em;opacity:0.2">&#10078;</span></h3>
+<p>Antoine de Saint-Exupéry - Wind, Sand and Stars</p>
+</div>
+
+<!-- Form Container -->
+<div class="w3-container w3-padding-64" id="contact">
+    <div class="w3-row-padding w3-center w3-padding-16" id="pricing">
+            <h2>Any Questions?</h2>
+            <p>We respond to all requests within 24 hours.</p><br>
+    </div>
+  <div class="w3-row">
+    <div class="w3-col m5">
+    <div class="w3-padding-16"><span class="w3-xlarge w3-border-teal w3-bottombar">Contact Details</span></div>
+      <p>Swing by for a cup of coffee or just say hi!</p>
+      <p><i class="fa fa-map-marker w3-text-teal w3-xlarge"></i>&nbsp;&nbsp;Mayor Street Lower, International Financial Services Centre, Dublin</p>
+      <p><i class="fa fa-phone w3-text-teal w3-xlarge"></i>&nbsp;&nbsp;+353 87 654 3210</p>
+      <p><i class="fa fa-envelope-o w3-text-teal w3-xlarge"></i>&nbsp;&nbsp;contact@bonvoyage.com</p>
+      <div class="w3-padding-16"><span class="w3-xlarge w3-border-teal w3-bottombar">Opening Hours</span></div>
+    <p>Monday: 9am - 6pm</p>
+    <p>Tuesday: 9am - 6pm</p>
+    <p>Wednesday: 9am - 6pm</p>
+    <p>Thursday: 9am - 7pm</p>
+    <p>Friday: 9am - 6pm</p>
+    <p>Saturday: 10am - 5pm</p>
+    <p style="font-style: italic">Closed on Sundays and Bank Holidays</p>
+    </div>
+    <div class="w3-col m7">
+      <form class="w3-container w3-card-4 w3-padding-16 w3-white">
+      <div class="w3-section">      
+        <label>First Name*</label>
+        <input class="w3-input" type="text" id="fName" name="fName" required>
+        <p style="color: red" id="alertfName"></p>
+      </div>
+      <div class="w3-section">      
+        <label>Last Name*</label>
+        <input class="w3-input" type="text" id="lName" name="lName" required>
+        <p style="color: red" id="alertlName"></p>
+      </div>
+      <div class="w3-section">      
+        <label>Email*</label>
+        <input class="w3-input" type="text" id="Email" name="Email" required>
+        <p style="color: red" id="alertEmail"></p>
+      </div>
+      <div class="w3-section">      
+        <label>Confirm Email*</label>
+        <input class="w3-input" type="text" id="CheckEmail" name="CheckEmail" required>
+        <p style="color: red" id="alertCheckEmail"></p>
+      </div>
+      <div class="w3-section">      
+        <label>Phone Number (optional)</label>
+        <input class="w3-input" type="text" id="Phone" name="Phone">
+      </div>
+      <div class="w3-section">      
+        <label>Subject*</label>
+        <input class="w3-input" type="text" id="subject" name="Subject" required>
+      </div>
+      <div class="w3-section">      
+        <label>Message*</label>
+        <input class="w3-input" type="text" id="message" name="Message" required>
+      </div>  
+      <div class="w3-section">      
+        <label>How much is 5 + 4?*</label>
+        <input class="w3-input" type="text" id="Robo" name="Robo" required>
+        <p style="color: red" id="alertRobo"></p>
+      </div>
+      <input class="w3-check" type="checkbox" checked name="Newsletter">
+      <label>Subscribe to Bon Voyage! newsletter</label>
+      <button type="submit" class="w3-button w3-right w3-theme" onclick="validateContactForm()">Send</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<!-- Image of location/map -->
+<img src="map.jpg" class="w3-image w3-greyscale-min" style="width:100%;">
 
 <% include ../partials/footer %>
