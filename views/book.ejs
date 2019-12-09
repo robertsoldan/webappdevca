@@ -4,22 +4,22 @@
     <!-- div that pulls the information for a particular location from the JSON file -->
     <div class="grid-container" id="hidetrip" style="display: block">
         <function(location)>
-            <div class=”item”>
-                <h2 class=”itemtitle”>
+            <div class="item">
+                <h2 class="itemtitle">
                     <%= location.city %>
                 </h2>
                 <img src="/hotelbedroom.jpeg">
                 <div class="items">
                     <h3> Included in this amazing deal:</h3>
-                    <p class=”itemp”>
+                    <p class="itemp">
                         <%= location.included %>
                     </p>
                     <h3> Extras you can go for: </h3>
-                    <p class=”itemp”>
+                    <p class="itemp">
                         <%= location.extras %>
                     </p>
                     <h3> Price: </h3>
-                    <p class=”itemp”>
+                    <p class="itemp">
                         <%= location.price %>
                     </p>
                 </div>
