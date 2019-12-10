@@ -93,3 +93,13 @@ img {
     width: 50%;
     padding: 10px;
 }
+
+#commentform {
+    
+    display: none;
+ 
+}
+
+textarea {
+    max-width: 100%;
+  }
