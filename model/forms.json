@@ -34,14 +34,5 @@
             "phone": "087163721",
             "subject": "OMG",
             "message": "It worked!!!!"
-      },
-      {
-            "id": 5,
-            "fname": "Sophia",
-            "lname": "Hennouni",
-            "email": "hennounisophi@yahoo.fr",
-            "phone": "",
-            "subject": "Last try",
-            "message": "Display check"
       }
 ]

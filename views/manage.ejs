@@ -10,7 +10,8 @@
   <div class="w3-quarter">
   <div class="w3-card white" style="height:500px">
     <div class="w3-container w3-teal">
-      <h3>Request # <%= forms.id %> <span class="w3-right w3-container" style="color:teal; font-size:smaller; background-color:white; cursor:pointer">Clear</span></h3>
+      <h3>Request # <%= forms.id %> 
+      <a class="w3-right w3-container w3-button" style="color:teal; font-size:smaller; background-color:white;" href="/delete/<%= forms.id %>"> Clear</a></h3>
     </div>
     <ul class="w3-ul w3-border-top">
       <li>

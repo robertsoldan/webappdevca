@@ -203,6 +203,30 @@ app.post("/contact", function(req, res){
 
 });
 
+// Delete form in JSON
+app.get('/delete/:id', function(req,res){
+    
+    // stringify JSON data so it can be called as a variable an modified as needed
+    var json = JSON.stringify(forms)
+    
+    // declare the incoming id from the url as a variable 
+    var keyToFind = parseInt(req.params.id)
+    
+    // use predetermined JavaScript functionality to map the data and find the information needed 
+    var index = forms.map(function(forms) {return forms.id}).indexOf(keyToFind)
+    console.log('keyToFind is...' + keyToFind)
+    
+    forms.splice(index, 1)
+        
+    // reformat the JSON and push it back to the actual file
+    json = JSON.stringify(forms, null, 6); // this line structures the JSON so it is easy on the eye
+    fs.writeFile('./model/forms.json', json, 'utf8', function(){})
+    
+    res.redirect("/manage");
+    
+});
+
+
 const PORT = process.env.PORT || 3000;
 
 app.listen(PORT, console.log(`Server started on port ${PORT}`));
