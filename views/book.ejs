@@ -2,33 +2,33 @@
 
 
     <!-- div that pulls the information for a particular location from the JSON file -->
-    <div id="hidetrip" style="display: block">
-        
-            <div class="item">
-                <h2 class="itemtitle w3-padding-32">
-                    <%= location.city %>
-                </h2>
-                <img src="/hotelbedroom.jpeg">
-                <div class="items">
-                    <h3> Included in this amazing deal:</h3>
-                    <p class="itemp">
-                        <%= location.included %>
-                    </p>
-                    <h3> Extras you can go for: </h3>
-                    <p class="itemp">
-                        <%= location.extras %>
-                    </p>
-                    <h3> Price: </h3>
-                    <p class="itemp">
-                        <%= location.price %>
-                    </p>
-                </div>
+    <div class="w3-content" id="hidetrip" style="display: block">
+
+        <div class="w3-center">
+            <h2 class="itemtitle w3-padding-32">
+                <%= location.city %>
+            </h2>
+            <img src="/hotelbedroom.jpeg" width="75%">
+            <div class="items">
+                <h3> Included in this amazing deal:</h3>
+                <p class="itemp">
+                    <%= location.included %>
+                </p>
+                <h3> Extras you can go for: </h3>
+                <p class="itemp">
+                    <%= location.extras %>
+                </p>
+                <h3> Price: </h3>
+                <p class="itemp">
+                    <%= location.price %>
+                </p>
             </div>
+        </div>
 
     </div>
 
     <!-- booking form, user enters full name, email and does simple validation -->
-    <div class="w3-container" id="hideform" style="display: block">
+    <div class="w3-content" id="hideform" style="display: block">
         <h2>Fill in your info below to book this trip</h2>
 
         <input class="w3-input w3-padding-16 w3-border" id="fullName" type="text" placeholder="Name" required name="Name">
@@ -43,9 +43,9 @@
     </div>
 
     <!-- booking confirmed div, set not to display so it can display when called for -->
-    <div class="grid-container" id="fireworks" style="display: none">
+    <div class="w3-content w3-padding-64" id="fireworks" style="display: none">
         <div class="w3-topbar w3-border-amber">
-            <img src="/fireworks.jpeg">
+            <img src="/fireworks.jpeg" width="100%">
             <h1 id="congrats">Your booking has been confirmed. We'll be in touch soon!</h1>
         </div>
     </div>
@@ -105,4 +105,4 @@
         }
     </script>
 
-    <% include ../partials/footer %>
+    <%include ../partials/footer %>
