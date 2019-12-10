@@ -26,18 +26,17 @@ function validateContactForm(){
         document.getElementById("alertEmail").innerHTML = "Email must contain '@'.";
     
     // Validate email 2 match
-    } else if (email != "" && email2 != ""){
-        if (email != email2){
-            document.getElementById("alertCheckEmail").innerHTML = "Emails don't match.";
-        }
-
+    } else if (email !== email2){
+        document.getElementById("alertCheckEmail").innerHTML = "Emails don't match.";
+        
     // Validate Robot
-    } else if (robo != 9 && robo != ""){
+    } else if (robo !== "9" && robo !== ""){
         document.getElementById("alertRobo").innerHTML = "Oops! Try again...";
 
     // Submission once all conditions evaluate FALSE
     } else {
         document.forms["contactForm"].submit();
+        alert("Message sent!\nRelax and have a cuppa, we will get back to you in no time.");
     }
 
 }
