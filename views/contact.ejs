@@ -73,7 +73,7 @@ It is in the compelling zest of high adventure and of victory, and in creative a
     <p style="font-style: italic">Closed on Sundays and Bank Holidays</p>
     </div>
     <div class="w3-half">
-      <form id="contactForm" class="w3-container w3-card-4 w3-padding-16 w3-white" method="post">
+      <form id="contactForm" class="w3-container w3-card-4 w3-padding-16 w3-white" onsubmit="event.preventDefault(); validateContactForm()" method="post">
       <div class="w3-section">      
         <label>First Name*</label>
         <input class="w3-input" type="text" id="fName" name="fName" required>
@@ -107,13 +107,11 @@ It is in the compelling zest of high adventure and of victory, and in creative a
         <input class="w3-input" type="text" id="Message" name="Message" required>
       </div>  
       <div class="w3-section">      
-        <label>How much is 5 + 4?*</label>
-        <input class="w3-input" type="text" id="Robo" name="Robo" required>
+        <label>I am not a robot*</label>
+        <input class="w3-input" type="text" id="Robo" name="Robo" placeholder="5 + 4 = ? " required>
         <p style="color: red" id="alertRobo"></p>
       </div>
-      <input class="w3-check" type="checkbox" checked name="Newsletter">
-      <label>Subscribe to Bon Voyage! newsletter</label>
-      <button class="w3-button w3-right w3-theme" onclick="validateContactForm()">Send</button>
+      <button type="submit" class="w3-button w3-right w3-theme">Send</button>
       </form>
     </div>
   </div>
