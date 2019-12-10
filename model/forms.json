@@ -25,14 +25,5 @@
             "phone": "0871637216",
             "subject": "test",
             "message": "add"
-      },
-      {
-            "id": 4,
-            "fname": "Sophia",
-            "lname": "Hennouni",
-            "email": "hennounisophi@yahoo.fr",
-            "phone": "087163721",
-            "subject": "OMG",
-            "message": "It worked!!!!"
       }
 ]
