@@ -1,7 +1,10 @@
 <% include ../partials/header %>
-
-<div>
-    <div>
+<script>
+        // Make the avatar image show in book
+        $("#avatarImg").attr('src', '../avatar.png');
+    </script>
+<div class="w3-card">
+    
         <form accept-charset="UTF-8" action="/commentsedit/<%= comment.id %>" method="post">
             <label for="name">Name:</label>
             <input type="text" name="name" value="<%= comment.name %>">
