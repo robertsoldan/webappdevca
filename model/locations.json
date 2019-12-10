@@ -1,16 +1,32 @@
-[
-{
-    "id": 1,
-    "name": "Dublin",
-    "country": "Ireland",
-    "description": "lorem ipsum",
-    "price" : 200
-},
-{
-    "id": 2,
-    "name": "Paris",
-    "country": "France",
-    "description": "lorem ipsum",
-    "price" : 150
-}
+[{
+        "city": "Rome",
+        "id": 1,
+        "price": "800 € per couple",
+        "included": "3 nights in a 4 star hotel, outbound flight (30/12/2020) and return flight (2/1/2020), transfers between the airport and the hotel, breakfast in the lovely hotel, amazing tour guide who knows more about Rome than the locals",
+        "extras": "Travel insurance – this can be done directly in our office, dinner in the hotel – 30€ per person per night, tickets for all the sights in Rome (50% off) – bookable with our tour guide during the trip, tickets for the hotel rooftop party (75 € per person), also bookable with our tour guide"
+    },
+
+    {
+        "city": "Paris",
+        "id": 2,
+        "price": "700€ per couple",
+        "included": "4 nights in a 4 star hotel, outbound flight (29/12/2020) and return flight (2/1/2020), transfers between the airport and the hotel, breakfast and dinner in the lovely hotel, amazing tour guide whose savoir-faire is unparalleled",
+        "extras": "Travel insurance – this can be done directly in our office, tickets for all the sights in Paris (60% off) – bookable with our tour guide during the trip, guided tour of Versailles and its gardens – bookable in advanced in our office"
+    },
+
+    {
+        "city": "London",
+        "id": 3,
+        "price": "700 €",
+        "included": "3 nights in a 4 star hotel, outbound flight on 30/12/2020 from Dublin airport and inbound on 2/1/2020, breakfast and dinner, tour guide who has the latest scoop on the Royal Family and the events around the city",
+        "extras": "Travel insurance – this can be done directly in our office, tickets for all the sights in London (50% off) – bookable with our tour guide during the trip, 3-day public transportation pass – bookable in our office"
+    },
+
+    {
+        "city": "Moscow",
+        "id": 4,
+        "price": "600 €",
+        "included": "4 nights in a 4 star hotel, outbound flight on 29/12/2020 from Dublin airport and inbound on 2/1/2020, transfers between the airport to the hotel, breakfast and dinner in the hotel, amazing tour guide whose speaks better Russian than Ivan Drago",
+        "extras": "Travel insurance – this can be done directly in our office, tickets for all the sights in Moscow (50% off) – bookable with our tour guide during the trip, guided tour of Tsaritsyno Museum-Reserve (the former summer residence of Empress Catherine the Great) – also bookable with our tour guide"
+    }
 ]
