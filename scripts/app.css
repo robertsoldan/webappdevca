@@ -34,3 +34,59 @@
   background: #C13584;
   color: white;
 }
+
+#deals {
+    margin: auto;
+    text-align: center;
+}
+
+img {
+    width: 100%;
+}
+
+.w3-display-container {
+    margin-bottom: 50px;
+}
+
+#ready {
+    bottom: 10%;
+    opacity: 0.7;
+    width: 70%;
+}
+
+#dest1 {
+    margin: 50px 0;
+}
+
+#dest2 {
+    margin: 50px 0;
+}
+
+#hidetrip {
+    margin: 40px 100px 40px 100px;
+    text-align: center;
+    background-color: #DCDCDC;
+    padding: 10px;
+}
+
+#hideform {
+    margin: 40px 100px 40px 100px;
+    text-align: center;
+    background-color: #DCDCDC;
+    padding: 10px;
+}
+
+#fireworks {
+    margin: auto;
+    text-align: center;
+    width: 50%;
+    border: 3px solid black;
+    padding: 10px;
+}
+
+.item {
+    margin: auto;
+    text-align: center;
+    width: 50%;
+    padding: 10px;
+}

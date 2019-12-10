@@ -1,34 +1,34 @@
 <% include ../partials/header %>
 
-<body>
 
-
-    <div class="grid-container" id="hidetrip">
+    <!-- div that pulls the information for a particular location from the JSON file -->
+    <div class="grid-container" id="hidetrip" style="display: block">
         <function(location)>
-            <div class=”item”>
-                <h2 class=”itemtitle”> City:
+            <div class="item">
+                <h2 class="itemtitle">
                     <%= location.city %>
                 </h2>
-                <p class=”itemp”> Included:
-                    <%= location.included %>
-                </p>
-                <p class=”itemp”> Extras:
-                    <%= location.extras %>
-                </p>
-                <p class=”itemp”> Price:
-                    <%= location.price %>
-                </p>
+                <img src="/hotelbedroom.jpeg">
+                <div class="items">
+                    <h3> Included in this amazing deal:</h3>
+                    <p class="itemp">
+                        <%= location.included %>
+                    </p>
+                    <h3> Extras you can go for: </h3>
+                    <p class="itemp">
+                        <%= location.extras %>
+                    </p>
+                    <h3> Price: </h3>
+                    <p class="itemp">
+                        <%= location.price %>
+                    </p>
+                </div>
             </div>
 
     </div>
 
-
-
-
-
-
-    <!-- Book -->
-    <div class="w3-container" id="hideform">
+    <!-- booking form, user enters full name, email and does simple validation -->
+    <div class="w3-container" id="hideform" style="display: block">
         <h2>Fill in your info below to book this trip</h2>
 
         <input class="w3-input w3-padding-16 w3-border" id="fullName" type="text" placeholder="Name" required name="Name">
@@ -37,64 +37,72 @@
         <p id="checkEmail"></p>
         <input class="w3-input w3-padding-16 w3-border" id="robo" type="text" placeholder="2000 + 20 = " required name="robo">
         <p id="checkRobo"></p>
+        <!-- button that calls on the JavaScript function that validates the form and displays the confirmation -->
         <p><button class="w3-button w3-black w3-padding-large" id="success" type="submit" onclick="checkForm()">BOOK</button></p>
 
     </div>
 
-
-
-
-    <div class="w3-half w3-container" id="show" style="display: none">
+    <!-- booking confirmed div, set not to display so it can display when called for -->
+    <div class="grid-container" id="fireworks" style="display: none">
         <div class="w3-topbar w3-border-amber">
-            <img src="/fireworks.jpeg" style="width:100%">
+            <img src="/fireworks.jpeg">
             <h1 id="congrats">Your booking has been confirmed. We'll be in touch soon!</h1>
         </div>
     </div>
 
-
     <script>
-        /* function checkForm() {
-                                                    x = document.getElementById("fullName").value;
-                                                    if (x == "") {
-                                                        document.getElementById("checkName").innerHTML = "The field must not be empty"
-                                                    } else if (/\s+/.test(x)) {
-                                                        document.getElementById("checkName").innerHTML = "Input correct"
-                                                    } else {
-                                                        document.getElementById("checkName").innerHTML = "You need to enter your first name and the last name"
-                                                    }
+        function checkForm() {
+            // checking that the users enters full name
+            x = document.getElementById("fullName").value;
+            if (x == "") {
+                document.getElementById("checkName").innerHTML = "The field must not be empty"
+            } else if (/\s+/.test(x)) {
+                document.getElementById("checkName").innerHTML = "Input correct"
+            } else {
+                document.getElementById("checkName").innerHTML = "You need to enter your first name and the last name"
+            }
 
-                                                    y = document.getElementById("email").value;
-                                                    testY = (/@/.test(y));
+            // checking the validity of an email address
+            y = document.getElementById("email").value;
+            testY = (/@/.test(y));
 
-                                                    if (testY == false) {
-                                                        document.getElementById("checkEmail").innerHTML = "The email address is invalid"
-                                                    } else if (testY == true) {
-                                                        document.getElementById("checkEmail").innerHTML = "Email address correct!"
-                                                    }
+            if (testY == false) {
+                document.getElementById("checkEmail").innerHTML = "The email address is invalid"
+            } else if (testY == true) {
+                document.getElementById("checkEmail").innerHTML = "Email address correct!"
+            }
 
-                                                    z = document.getElementById("robo").value;
-                                                    if (z == 2020) {
-                                                        document.getElementById("checkRobo").innerHTML = "Thanks for verifying."
-                                                    } else {
-                                                        document.getElementById("checkRobo").innerHTML = "Try again."
-                                                    }
+            // checking if the user do maths - real person validation
+            z = document.getElementById("robo").value;
+            if (z == 2020) {
+                document.getElementById("checkRobo").innerHTML = "Thanks for verifying."
+            } else {
+                document.getElementById("checkRobo").innerHTML = "Try again."
+            }
 
-                                                    if (/\s+/.test(x) && testY == true && z == 2020) {
-
-                                                    }
-                                                 } */
-        $(document).ready(function() {
-            $("#success").click(function() {
-                $("#hideform").hide();
-                $("#hidetrip").hide();
-                $("#show").show();
-            })
-        });
+            /* check if all the items have validated, if true, it collapses
+             the form and the information about the trip, shows the confirmation page*/
+            if (/\s+/.test(x) && testY == true && z == 2020) {
+                var a = document.getElementById("hideform");
+                var b = document.getElementById("hidetrip");
+                var c = document.getElementById("fireworks");
+                if (a.style.display === "block") {
+                    a.style.display = "none";
+                } else {
+                    a.style.display = "block";
+                }
+                if (b.style.display === "block") {
+                    b.style.display = "none";
+                } else {
+                    b.style.display = "block";
+                }
+                if (c.style.display === "none") {
+                    c.style.display = "block";
+                } else {
+                    c.style.display = "none";
+                }
+            }
+        }
     </script>
 
-
-</body>
-
-</html>
-
-<% include ../partials/footer %>
+    <% include ../partials/footer %>
