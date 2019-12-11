@@ -6,12 +6,15 @@ var forms = require("./model/forms.json"); // allow the app to access forms.json
 const fs = require('fs');
 const bodyParser = require("body-parser");
 
+
 // Making sure we have access to all the relevant folders
 app.use(express.static("views"));
 app.use(express.static("scripts"));
 app.use(express.static("images"));
 app.use(express.static("public"));
 app.use(express.static("partials"));
+
+
 
 // Body parser 
 app.use(bodyParser.urlencoded({
@@ -40,6 +43,7 @@ app.get('/book', function(req, res) {
 
 app.get('/comments', function(req, res) {
     maxId(comments);
+    
     res.render("comments", {
         comments
     });

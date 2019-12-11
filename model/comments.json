@@ -1,57 +1,16 @@
 [
     {
-        "id": 2,
-        "location_name": "Homee",
-        "name": "James Holden",
-        "email": "Cccc",
-        "comment": "Blahhh"
+        "id": "0",
+        "location_name": "Dublin",
+        "name": "Robb",
+        "email": "robb@robb",
+        "comment": "Good stuff! xD Love it"
     },
     {
-        "id": 3,
-        "location_name": "adsaa",
-        "name": "nooo",
-        "email": "asdasd",
-        "comment": "assdasd"
-    },
-    {
-        "id": 4,
-        "location_name": "csacas",
-        "name": "ascsa",
-        "email": "csacascsa",
-        "comment": "csacsa"
-    },
-    {
-        "id": 5,
-        "location_name": "sfdaca",
-        "name": "Test",
-        "email": "SSS"
-    },
-    {
-        "id": 6,
-        "location_name": "",
-        "name": "",
-        "email": "",
-        "comment": ""
-    },
-    {
-        "id": 7,
-        "location_name": "asdada",
-        "name": "das",
-        "email": "asdsa@",
-        "comment": "dasdadsa"
-    },
-    {
-        "id": 8,
-        "location_name": "",
-        "name": "dsaca",
-        "email": "asda@",
-        "comment": ""
-    },
-    {
-        "id": 9,
-        "location_name": "sadadas",
-        "name": "adasda",
-        "email": "a@",
-        "comment": "casaca"
+        "id": "01",
+        "location_name": "Paris",
+        "name": "Andrew",
+        "email": "andd@and",
+        "comment": "Was good! :P"
     }
 ]

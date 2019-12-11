@@ -1,3 +1,8 @@
+$(document).ready(function() {
+    $("#commentform").hide();
+    $(".editcheck").hide();
+});
+
 function displayField(id) {
     $("#edit" + id).fadeOut(0);
     $("#" + id).fadeIn(200);
@@ -8,6 +13,8 @@ function checkEmail(email, id) {
     console.log(id);
 
     if(email === this.$("#emailcheck" + id).val()) {
+        $("#commentform").hide();
+        $("#" + id).hide();
         window.location.replace('/commentsedit/' + id);
     } else alert("Sorry, this doesnt seem to be correct");
 }
