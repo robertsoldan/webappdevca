@@ -1,29 +1,43 @@
 <% include ../partials/header %>
 
 <script src="comments.js"></script>
-
-
-<div class="w3-padding-large w3-padding-64" >
-    <h1>Add comment </h1>
-    <button onclick="showComment()" id="showcommentbtn">Comment</button>
+<div class="image-wrapper">
+        <img src="newyear.png" alt="new year fireworks">
+        <div class="w3-container w3-amber w3-hover-orange w3-hide-small w3-twothird w3-margin-bottom w3-margin-top" id="tellus">
+                <h2>Tell us how it went!</h2>
+            </div>
+        </div>
+<div class="w3-padding-large w3-padding-64" >  
+    <div class="w3-container">
+        
+        
+        </div>
+        <div class="w3-container">
+    <button onclick="showComment()" id="showcommentbtn" class="w3-btn w3-teal w3-round">Comment</button>
+</div>
     <div class="w3-container" id="commentform">
-    <div class="w3-container w3-twothird w3-card w3-padding-large w3-margin-bottom w3-margin-top w3-round">
-        <form accept-charset="UTF-8" action="/comments" method="post">
+            
+    <div class="w3-container w3-twothird w3-card w3-padding-large w3-margin-bottom w3-margin-top w3-round w3-topbar w3-border-amber">
+        <form accept-charset="UTF-8" action="/comments" method="post" id="commentForm" onsubmit="event.preventDefault(); validateSubmitForm()">
             <label for="name">Name:&nbsp;</label><br>
             <input class="w3-input" type="text" name="name">
+            <p class="w3-text-red" id="name"></p>
             <br><br>
             <label for="email">Email:&nbsp;</label><br>
             <input class="w3-input" type="text" name="email">
+            <p class="w3-text-red" id="email"></p>
             <span> &nbsp;(will not be displayed)</span>
             <br><br>
             <label for="location">Location:&nbsp;</label><br>
             <input class="w3-input" type="text" name="location">
+            <p class="w3-text-red" id="location"></p>
             <br><br>
             <label for="comment">Comment:</label>
             <br>
-            <textarea name="comment w3-input" cols="40" rows="4"></textarea>
+            <textarea name="comment" class="w3-input" cols="40" rows="4"></textarea>
+            <p class="w3-text-red" id="comment"></p>
             <br><br>
-            <button onclick="submitForm()">Comment</button>
+            <button class="w3-btn w3-teal w3-round" type="submit">Comment</button>
         </form>
         <br><br>
     </div>
@@ -31,15 +45,15 @@
 
     <div class="w3-container">
         <% comments.forEach(function(comment){ %>
-              <div class="w3-card w3-padding-large w3-twothird w3-margin-bottom w3-margin-top w3-round"> 
+              <div class="w3-card w3-padding-large w3-twothird w3-margin-bottom w3-margin-top w3-round w3-topbar w3-border-amber"> 
                     <h3> Location: <%= comment.location_name %></h3>
                     <h5> Name: <%= comment.name%></h3>
                     <h5> Comment: <%= comment.comment %></h3>
-                    <button onclick="displayField('<%= comment.id %>')" id="edit<%= comment.id %>">Edit</button>                 
+                    <button class="w3-btn w3-teal w3-round" onclick="displayField('<%= comment.id %>')" id="edit<%= comment.id %>">Edit</button>                 
                     <div class="editcheck" id="<%= comment.id %>">
-                        <p>Please enter your email to verify your edit:</p>
+                        <p id="emailchecktext">Please enter your email to verify your edit:</p>
                         <input type="text" name="email" id="emailcheck<%= comment.id %>">
-                        <button onclick="checkEmail('<%= comment.email %>', '<%= comment.id %>')">Edit</button>
+                        <button class="w3-btn w3-teal w3-round" onclick="checkEmail('<%= comment.email %>', '<%= comment.id %>')" >Edit</button>
                         </div>
                     </div>  <br>
             <% }); %>
