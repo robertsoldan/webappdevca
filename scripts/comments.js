@@ -51,7 +51,7 @@ function validateSubmitForm() {
         document.getElementById("comment").innerHTML = "Please leave a comment!";
     } else {
         document.forms["commentForm"].submit();
-        
+        $("#commentform").hide();
         return true;
     }
 }

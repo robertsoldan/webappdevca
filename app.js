@@ -60,7 +60,7 @@ function maxId(arr) {
     if (arr.length === 0) {
         return 0; // If the array is empty, just return 0
     } else {
-        return arr[arr.length - 1].id + 1; // Grab the id of the last object in the array and add 1 to that
+        return parseInt(arr[arr.length - 1].id) + 1; // Grab the id of the last object in the array and add 1 to that
     }
 }
 
@@ -105,7 +105,7 @@ app.get('/commentsedit/:id', function(req, res) {
 
 app.post('/commentsedit/:id', function(req, res) {
     let comment = {
-        "id": req.params.id,
+        "id": parseInt(req.params.id),
         "location_name": req.body.location,
         "name": req.body.name,
         "email": req.body.email,
@@ -127,7 +127,11 @@ app.post('/commentsedit/:id', function(req, res) {
         }
     });
 
-    res.redirect('/comments');
+    res.redirect('/commentsreturn');
+});
+
+app.get('/commentsreturn', function(req, res) {
+    res.render('commentsreturn');
 });
 
 // Deleting a comment

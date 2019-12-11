@@ -1,16 +1,9 @@
 [
     {
-        "id": "0",
+        "id": 0,
         "location_name": "Dublin",
         "name": "Robb",
-        "email": "robb@robb",
-        "comment": "Good stuff! xD Love it"
-    },
-    {
-        "id": "01",
-        "location_name": "Paris",
-        "name": "Andrew",
-        "email": "andd@and",
-        "comment": "Was good! :P"
+        "email": "soldanrobertandrei@gmail.com",
+        "comment": "Was good, great craic ! Love it, can't wait to go back!!"
     }
 ]
